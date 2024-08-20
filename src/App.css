@@ -1,0 +1,53 @@
+.login-button{
+  display: flex;
+  justify-content: end;
+  margin: 20px;
+  cursor: pointer;
+}
+
+.logo-section{
+  display: flex;
+  justify-content: center;
+}
+
+.menu-list{
+  display: flex;
+list-style-type: none;
+justify-content: center;}
+
+.menu-list li{
+  margin: 20px;
+}
+
+.login{
+  margin-left: 5px;
+}
+.top-line{
+  display: flex;
+  justify-content: space-between;
+}
+input{
+ 
+  border:none;
+}
+
+.input-box{
+  width: 200px;
+  border-bottom: 2px solid #191919;
+  text-align: right;
+  margin: 20px;
+}
+
+.img-box{
+  max-width: 320px;
+}
+
+.login-input{
+  width: 60%;
+}
+
+.container-box:hover{
+  transform: scale(1.1);
+  z-index: 1;
+  transition: 0.5s;
+}
