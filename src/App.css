@@ -42,12 +42,36 @@ input{
   max-width: 320px;
 }
 
-.login-input{
-  width: 60%;
-}
+
 
 .container-box:hover{
   transform: scale(1.1);
   z-index: 1;
   transition: 0.5s;
+}
+
+
+
+.detail-box{
+  display: flax;
+}
+
+
+.order-button{
+  padding: 10px;
+  font-size: 26px;
+  margin: 5px;
+  margin-top: 100px;
+  width: 90%;
+  background-color: rgb(225, 25, 25);
+  color:#fff;
+  border: none;
+}
+
+.detail-font{
+  font-size: 30px;
+}
+
+.new{
+  color:rgb(225, 25, 25);
 }
