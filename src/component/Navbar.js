@@ -19,18 +19,27 @@ const Navbar = () => {
     navigate('/Login')
   }
 
-  
+  const search=(event)=>{
+   if(event.key=="Enter"){
+    let keyword = event.target.value
+    navigate(`/?q=${keyword}`)//url 바꿔주는건 네이게이트 
+   }
+  }
   return (
     <div>
       <div className="top-line">
       <div className="input-box">
           <FontAwesomeIcon icon={faSearch}/>
-          <input type="text" />
+          <input type="text" onKeyPress={(event)=>search(event)}/>
         </div>
+
+
         <div className="login-button" onClick={goToLogin}>
           <FontAwesomeIcon icon={faUser} /> 
           <div className="login">로그인</div>
         </div>
+
+        
       </div>
       <div className="logo-section">
         <img
