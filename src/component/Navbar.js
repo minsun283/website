@@ -1,7 +1,7 @@
 import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faUser } from "@fortawesome/free-regular-svg-icons";
-import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { faBars,faSearch } from "@fortawesome/free-solid-svg-icons";
 import { useNavigate } from "react-router-dom"; 
 import { useState } from "react";
 
@@ -32,11 +32,36 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
 
 
   return (
+
     <div>
-      <div className="top-line">
+      <div className="side-menu" style={{ width: width }}>
+        <button className="closebtn" onClick={() => setWidth(0)}>
+          &times;
+        </button>
+        <div className="side-menu-list" id="menu-list">
+          {menuList.map((menu, index) => (
+            <button key={index}>{menu}</button>
+          ))}
+        </div>
+        <div>
+          <FontAwesomeIcon icon={faSearch}/>
+          <input type="text" onKeyPress={(event)=>search(event)}/>
+        </div>
+      </div>
+  
+
+
+    <div>
+      
       <div className="input-box">
           <FontAwesomeIcon icon={faSearch}/>
           <input type="text" onKeyPress={(event)=>search(event)}/>
+        </div>
+
+
+      <div className="top-line">
+       <div className="burger-menu hide">
+          <FontAwesomeIcon icon={faBars} onClick={() => setWidth(250)} />
         </div>
 
       {authenticate?(
@@ -65,7 +90,7 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
         </ul>
         
       </div>
-    </div>
+    </div></div>
   );
 };
 
