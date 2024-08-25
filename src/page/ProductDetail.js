@@ -20,7 +20,7 @@ const [product, setProduct]=useState(null)
     getProductDetail()
   },[])
   return (
-    <Container>
+    <Container className='deatail-page'>
       <Row>
         <Col><img  className='detail-font' src={product?.img}/></Col>
         <Col><div className='new'>{product?.new==true?"신제품":""}</div>

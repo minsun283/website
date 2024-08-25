@@ -33,7 +33,7 @@ const Navbar = ({ authenticate, setAuthenticate }) => {
 
   return (
 
-    <div>
+    <div className="nav-area">
       <div className="side-menu" style={{ width: width }}>
         <button className="closebtn" onClick={() => setWidth(0)}>
           &times;
