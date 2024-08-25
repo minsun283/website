@@ -20,9 +20,9 @@ const [product, setProduct]=useState(null)
     getProductDetail()
   },[])
   return (
-    <Container className='deatail-page'>
+    <Container>
       <Row>
-        <Col><img  className='detail-font' src={product?.img}/></Col>
+        <Col><img  className='detail-img detail-font' src={product?.img}/></Col>
         <Col><div className='new'>{product?.new==true?"신제품":""}</div>
         <div> {product?.choice==true?"Conscious Choice":""}</div>
         <div className='detail-font'>{product?.title}</div>

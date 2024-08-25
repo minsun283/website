@@ -72,7 +72,9 @@ input{
 .detail-font{
   font-size: 30px;
 }
-
+.detail-img{
+  margin-bottom: 1em;
+}
 .new{
   color:rgb(225, 25, 25);
 }
@@ -93,8 +95,8 @@ input{
     display: none;
   }
 
-  .detail-font{
-    max-width: 100vw;
+  .detail-img{
+    max-width: 90vw;
   }
 }
 
